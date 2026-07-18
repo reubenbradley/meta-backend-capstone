@@ -1,3 +1,4 @@
+# type:ignore
 # littlelemon/settings.py
 """
 Django settings for littlelemon project.
