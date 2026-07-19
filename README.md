@@ -16,8 +16,9 @@ This is the capstone project for the Meta Back End Developer course. The project
 2. Navigate to the project directory.
 3. Create a virtual environment and activate it.
 4. Install the required dependencies using `pip install -r requirements.txt`.
-5. Apply migrations using `python manage.py migrate`.
-6. Run the development server using `python manage.py runserver`.
+5. Make sure you change the MySql credentials to match the database, username, and password on your system
+6. Apply migrations using `python manage.py migrate`.
+7. Run the development server using `python manage.py runserver`.
 
 ## Usage
 
