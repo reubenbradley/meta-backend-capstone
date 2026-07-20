@@ -23,3 +23,19 @@ This is the capstone project for the Meta Back End Developer course. The project
 ## Usage
 
 Open a web browser and navigate to `http://127.0.0.1:8000/` to access the Little Lemon Restaurant web application.
+
+## Admin User
+
+To access the Django admin interface, follow these steps:
+
+1. Start the development server using `python manage.py runserver`.
+2. Open a web browser and navigate to `http://127.0.0.1:8000/admin/`.
+3. Log in using the admin credentials you created during the setup process.
+4. You can now manage bookings and menus through the Django admin interface.
+
+## Database Schema
+
+The database schema for the Little Lemon Restaurant web application includes the following models:
+
+- `Booking`: Represents a booking made by a customer.
+- `Menu`: Represents a menu item with a title, price, and inventory.
