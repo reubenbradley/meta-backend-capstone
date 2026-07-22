@@ -86,10 +86,11 @@ Open a web browser and navigate to `http://127.0.0.1:8000/` to access the Little
 
 To access the Django admin interface, follow these steps:
 
-1. Start the development server using `python manage.py runserver`.
-2. Open a web browser and navigate to `http://127.0.0.1:8000/admin/`.
-3. Log in using the admin credentials you created during the setup process.
-4. You can manage bookings, menus, and users through the Django admin interface.
+1. Create an admin user by running `python manage.py createsuperuser`.
+2. Start the development server using `python manage.py runserver`.
+3. Open a web browser and navigate to `http://127.0.0.1:8000/admin/`.
+4. Log in using the admin credentials you created during the setup process.
+5. You can manage bookings, menus, and users through the Django admin interface.
 
 ## Database Schema
 
