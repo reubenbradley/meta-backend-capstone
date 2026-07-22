@@ -26,4 +26,4 @@ class SingleMenuItemView(RetrieveUpdateAPIView, DestroyAPIView):
 
 
 def index(request):
-    return render(request, 'index.html', {})
+    return render(request, 'restaurant/index.html', {})
