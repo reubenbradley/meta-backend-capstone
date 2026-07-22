@@ -17,12 +17,14 @@ bookings and menus.
 - `http://localhost:8000/`: Project Home page.
 - `http://localhost:8000/admin/`: Django admin interface.
 - `http://localhost:8000/restaurant/`: Restaurant index page.
-- `http://localhost:8000/restaurant/menu/`: API Menu page.
-- `http://localhost:8000/restaurant/booking/`: API Bookings page.
-- `http://localhost:8000/auth/`: Root API Authentication endpoints.
-- `http://localhost:8000/auth/users/`: Browsable API URL User List
-- 'http://localhost:8000/auth/token/login/': Authentication token login endpoint
-- 'http://127.0.0.1:8000/auth/token/logout/': Authentication token logout endpoint
+- `http://localhost:8000/restaurant/menu/`: API Menu page. (GET)
+- `http://localhost:8000/restaurant/booking/`: API Bookings page. (GET) 
+- `http://localhost:8000/restaurant/booking/tables/` API Table Bookings (GET)
+- `http://localhost:8000/auth/`: Root API Authentication endpoints. (GET)
+- `http://localhost:8000/auth/users/`: Browsable API URL User List (GET)
+- `http://localhost:8000/auth/token/login/`: Authentication token create/login endpoint (POST)
+- `http://127.0.0.1:8000/auth/token/logout/`: Authentication token logout endpoint (POST)
+- `http://localhost:8000/restaurant/api-token-auth/`: Authentication obtain auth token (POST)
 
 
 ## Setup Instructions
