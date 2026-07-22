@@ -98,3 +98,7 @@ The database schema for the Little Lemon Restaurant web application includes the
 - `Booking`: Represents a booking made by a customer.
 - `Menu`: Represents a menu item with a Title, Price, and Inventory.
 - `User`: Represents a user with a username, email, and password.
+
+## Static Assets
+
+I found the exercise for the static assets instructs the learner to create a blank page leading to `http://localhost:8000/restaurant/` and does not provide anything regarding the project home page. At least as far as I understand the instructions. So I am using the index page provided in the static assets download and I use that for that restaurant index page and the project home page. Note, none of the internal links on the home page actually work as they would otherwise lead to protected DRF endpoints you are supposed to test via Insomnia.
