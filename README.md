@@ -25,29 +25,47 @@ bookings and menus.
 8. Apply migrations using `python manage.py migrate`.
 9. Run the development server using `python manage.py runserver`.
 
-## Testing the API Endpoints
-
-While the API endpoints are accessible via a browser, you should use Insomnia or Postman to test the API 
-endpoints to prevent unauthorized (401) access errors. You need to send a valid token to access any/all 
-endpoints marked below as an API endpoint unless otherwise noted. Anyone taking this course should have 
-access to Insomnia or Postman, and you already should be familiar with how to use them to test the API 
-endpoints.
-
-## Url/API Structure
+## URL Structure and API Testing
 
 - `http://localhost:8000/`: Project Home page.
 - `http://localhost:8000/admin/`: Django admin interface.
 - `http://localhost:8000/restaurant/`: Restaurant index page.
-- `http://localhost:8000/restaurant/menu/`: API Menu page (GET). Fields – Title, Price, Inventory (POST)
-- `http://localhost:8000/restaurant/menu/<pk>`: API Menu page (GET). Fields – Title, Price, Inventory (PUT, DELETE)
+- `http://localhost:8000/restaurant/menu/`: Menu API list and create endpoint.
+- `http://localhost:8000/restaurant/menu/<pk>`: Menu API detail endpoint.
 - `http://localhost:8000/restaurant/booking/`: API Bookings page (GET). No Token Needed due to Default Router settings
-- `http://localhost:8000/restaurant/booking/tables/` API Table Bookings (GET). Fields – Name, No_of_guests, BookingDate (POST) 
-- `http://localhost:8000/restaurant/booking/tables/<pk>` API Table Bookings (GET). Fields – Name, No_of_guests, BookingDate (PUT, DELETE)
+- `http://localhost:8000/restaurant/booking/tables/`: Table booking list and create endpoint.
+- `http://localhost:8000/restaurant/booking/tables/<pk>`: Table booking detail endpoint.
 - `http://localhost:8000/auth/`: Root API Authentication endpoints. (GET)
 - `http://localhost:8000/auth/users/`: Browsable API URL User List (GET)
 - `http://localhost:8000/auth/token/login/`: Authentication token create/login endpoint (POST)
 - `http://localhost:8000/auth/token/logout/`: Authentication token logout endpoint (POST)
 - `http://localhost:8000/restaurant/api-token-auth/`: Authentication obtain auth token (POST)
+
+Use Insomnia or Postman to test the API endpoints.
+
+Menu API:
+
+- `GET /restaurant/menu/`
+- `POST /restaurant/menu/`
+- `GET /restaurant/menu/<pk>`
+- `PUT /restaurant/menu/<pk>`
+- `PATCH /restaurant/menu/<pk>`
+- `DELETE /restaurant/menu/<pk>`
+
+Booking API:
+
+- `GET /restaurant/booking/`
+- `GET /restaurant/booking/tables/`
+- `POST /restaurant/booking/tables/`
+- `GET /restaurant/booking/tables/<pk>`
+- `PUT /restaurant/booking/tables/<pk>`
+- `PATCH /restaurant/booking/tables/<pk>`
+- `DELETE /restaurant/booking/tables/<pk>`
+
+Authentication:
+
+- Use a valid token for protected endpoints.
+- The booking detail endpoints require authentication.
 
 
 ## Running Tests 
