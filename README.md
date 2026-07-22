@@ -10,6 +10,7 @@ bookings and menus.
 - `restaurant/`: Django app for the restaurant functionality.
 - `templates/`: Directory containing HTML templates.
 - `static/`: Directory containing static files like CSS, JavaScript, and images.
+- `tests/`: Directory containing test files.
 - `manage.py`: Django management script.
 
 ## Url Structure
@@ -17,9 +18,11 @@ bookings and menus.
 - `http://localhost:8000/`: Project Home page.
 - `http://localhost:8000/admin/`: Django admin interface.
 - `http://localhost:8000/restaurant/`: Restaurant index page.
-- `http://localhost:8000/restaurant/menu/`: API Menu page. (GET)
-- `http://localhost:8000/restaurant/booking/`: API Bookings page. (GET) 
-- `http://localhost:8000/restaurant/booking/tables/` API Table Bookings (GET)
+- `http://localhost:8000/restaurant/menu/`: API Menu page (GET). Fields – Title, Price, Inventory (POST)
+- `http://localhost:8000/restaurant/menu/1`: API Menu page (GET). Fields – Title, Price, Inventory (PUT, DELETE)
+- `http://localhost:8000/restaurant/booking/`: API Bookings page (GET). No Token Needed
+- `http://localhost:8000/restaurant/booking/tables/` API Table Bookings (GET). Fields – Name, No_of_guests, BookingDate (POST) 
+- `http://localhost:8000/restaurant/booking/tables/1` API Table Bookings (GET). Fields – Name, No_of_guests, BookingDate (PUT, DELETE)
 - `http://localhost:8000/auth/`: Root API Authentication endpoints. (GET)
 - `http://localhost:8000/auth/users/`: Browsable API URL User List (GET)
 - `http://localhost:8000/auth/token/login/`: Authentication token create/login endpoint (POST)
@@ -39,7 +42,15 @@ bookings and menus.
 8. Apply migrations using `python manage.py migrate`.
 9. Run the development server using `python manage.py runserver`.
 
-## Running Tests (Optional)
+## Testing the API Endpoints
+
+While the API endpoints are accessible via a browser, you should use Insomnia or Postman to test the API 
+endpoints to prevent unauthorized (401) access errors. You need to send a valid token to access any/all 
+endpoints marked above as an API endpoint unless otherwise noted. Anyone taking this course should have 
+access to Insomnia or Postman, and you already should be familiar with how to use them to test the API 
+endpoints.
+
+## Running Tests 
 
 Run tests using:
 
@@ -47,8 +58,8 @@ Run tests using:
 
 The Django test runner creates a temporary database (`test_LittleLemon`) and applies migrations before running tests.
 
-If your MySQL user is restricted, it must have permission to create databases and modify the temporary test database. 
-Otherwise, `python manage.py test` may fail during test database creation.
+If your MySQL user is restricted, it must have permission to create databases and modify the temporary test 
+database. Otherwise, `python manage.py test` may fail during test database creation.
 
 ## Usage
 
