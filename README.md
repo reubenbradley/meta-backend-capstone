@@ -23,7 +23,7 @@ bookings and menus.
 - `http://localhost:8000/auth/`: Root API Authentication endpoints. (GET)
 - `http://localhost:8000/auth/users/`: Browsable API URL User List (GET)
 - `http://localhost:8000/auth/token/login/`: Authentication token create/login endpoint (POST)
-- `http://127.0.0.1:8000/auth/token/logout/`: Authentication token logout endpoint (POST)
+- `http://localhost:8000/auth/token/logout/`: Authentication token logout endpoint (POST)
 - `http://localhost:8000/restaurant/api-token-auth/`: Authentication obtain auth token (POST)
 
 
@@ -33,9 +33,22 @@ bookings and menus.
 2. Navigate to the project directory.
 3. Create a virtual environment and activate it. Create it by running `python3 -m venv .venv` or the equivalent command for your system.
 4. Install the required dependencies using `pip install -r requirements.txt`.
-5. Make sure you change the MySql credentials to match the database, username, and password on your system
-6. Apply migrations using `python manage.py migrate`.
-7. Run the development server using `python manage.py runserver`.
+5. Create an empty MySQL database named `LittleLemon`.
+6. If you are not using the root MySQL user, create or use a MySQL user with privileges on the `LittleLemon` database. 
+7. Make sure you change the MySql credentials to match the database, username, and password on your system in `settings.py`
+8. Apply migrations using `python manage.py migrate`.
+9. Run the development server using `python manage.py runserver`.
+
+## Running Tests (Optional)
+
+Run tests using:
+
+    python manage.py test
+
+The Django test runner creates a temporary database (`test_LittleLemon`) and applies migrations before running tests.
+
+If your MySQL user is restricted, it must have permission to create databases and modify the temporary test database. 
+Otherwise, `python manage.py test` may fail during test database creation.
 
 ## Usage
 

@@ -93,9 +93,9 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'LittleLemon',
-            'USER': 'admindjango',
-            'PASSWORD': 'StrongPassword',
+            'NAME': 'LittleLemon',  # Change to match your system
+            'USER': 'admindjango',  # Change to match your system
+            'PASSWORD': 'StrongPassword', # Change to match your system
             'HOST': '127.0.0.1',
             'PORT': '3306',
             'OPTIONS': {
