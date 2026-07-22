@@ -1,7 +1,7 @@
 # Meta Back End Developer Capstone Project
 
-This is the capstone project for the Meta Back End Developer course. The project involves creating a web 
-application for the Little Lemon Restaurant using Django. Additionally, it includes an API for managing 
+This is the capstone project for the Meta Back End Developer course. The project involves creating a web
+application for the Little Lemon Restaurant using Django. Additionally, it includes an API for managing
 bookings and menus.
 
 ## Project Structure
@@ -20,7 +20,7 @@ bookings and menus.
 3. Create a virtual environment and activate it. Create it by running `python3 -m venv .venv` or the equivalent command for your system.
 4. Install the required dependencies using `pip install -r requirements.txt`.
 5. Create an empty MySQL database named `LittleLemon`.
-6. If you are not using the root MySQL user, create or use a MySQL user with privileges on the `LittleLemon` database. 
+6. If you are not using the root MySQL user, create or use a MySQL user with privileges on the `LittleLemon` database.
 7. Make sure you change the MySql credentials to match the database, username, and password on your system in `settings.py`
 8. Apply migrations using `python manage.py migrate`.
 9. Run the development server using `python manage.py runserver`.
@@ -67,8 +67,7 @@ Authentication:
 - Use a valid token for protected endpoints.
 - The booking detail endpoints require authentication.
 
-
-## Running Tests 
+## Running Tests
 
 Run tests using:
 
@@ -76,7 +75,7 @@ Run tests using:
 
 The Django test runner creates a temporary database (`test_LittleLemon`) and applies migrations before running tests.
 
-If your MySQL user is restricted, it must have permission to create databases and modify the temporary test 
+If your MySQL user is restricted, it must have permission to create databases and modify the temporary test
 database. Otherwise, `python manage.py test` may fail during test database creation.
 
 ## Usage
@@ -97,5 +96,5 @@ To access the Django admin interface, follow these steps:
 The database schema for the Little Lemon Restaurant web application includes the following models:
 
 - `Booking`: Represents a booking made by a customer.
-- `Menu`: Represents a menu item with a title, price, and inventory.
+- `Menu`: Represents a menu item with a Title, Price, and Inventory.
 - `User`: Represents a user with a username, email, and password.
