@@ -73,14 +73,16 @@ Run tests using:
 
     python manage.py test
 
-The Django test runner creates a temporary database (`test_LittleLemon`) and applies migrations before running tests.
+The Django test runner creates a temporary database (`test_LittleLemon`) and applies migrations before
+running tests.
 
 If your MySQL user is restricted, it must have permission to create databases and modify the temporary test
 database. Otherwise, `python manage.py test` may fail during test database creation.
 
 ## Usage
 
-Open a web browser and navigate to `http://127.0.0.1:8000/` to access the Little Lemon Restaurant web application.
+Open a web browser and navigate to `http://127.0.0.1:8000/` to access the Little Lemon Restaurant web
+application.
 
 ## Admin User
 
@@ -102,4 +104,18 @@ The database schema for the Little Lemon Restaurant web application includes the
 
 ## Static Assets
 
-I found the exercise for the static assets instructs the learner to create a blank page leading to `http://localhost:8000/restaurant/` and does not provide anything regarding the project home page. At least as far as I understand the instructions. So I am using the index page provided in the static assets download and I use that for that restaurant index page and the project home page. Note, none of the internal links on the home page actually work as they would otherwise lead to protected DRF endpoints you are supposed to test via Insomnia.
+I found the exercise for the static assets instructs the learner to create a blank page leading
+to `http://localhost:8000/restaurant/` and does not provide anything regarding the project home page.
+At least as far as I understand the instructions. So I am using the index page provided in the static
+assets download, and I use that for that restaurant index page and the project home page. Note, none of
+the internal links on the home page actually work as they would otherwise lead to protected DRF
+endpoints you are supposed to test via Insomnia.
+
+## Using SQLite instead of MySql
+
+By default the Django setup will use the local MySql database which was required for the peer review.
+If you want to test the project without using MySql directly you can do this by setting an environement variable before starting the server:
+
+`USE_SQLITE=1`
+
+I set this up so that I can quickly test downloading and setting the project up on my laptop without having to set up a MySql database. The SQLite database will be created in the project root directory as `db.sqlite3`.
