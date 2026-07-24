@@ -1,8 +1,9 @@
 # Meta Back End Developer Capstone Project
 
 This is the capstone project for the Meta Back End Developer course. The project involves creating a web
-application for the Little Lemon Restaurant using Django. Additionally, it includes an API for managing
-bookings and menus.
+application for the Little Lemon Restaurant using Django. The primary goal of this was to create a full web app with a backend API. It simply demonstrates setting up a simple front end, and back end API
+endpoints utilizing Django and Django Rest Framework (DRF). The project includes user authentication via
+Djoser, menu management, and booking functionality. It is not intended to be a fully functioning app.
 
 ## Project Structure
 
