@@ -22,7 +22,7 @@ Djoser, menu management, and booking functionality. It is not intended to be a f
 4. Install the required dependencies using `pip install -r requirements.txt`.
 5. Create an empty MySQL database named `LittleLemon`.
 6. If you are not using the root MySQL user, create or use a MySQL user with privileges on the `LittleLemon` database.
-7. Make sure you change the MySql credentials to match the database, username, and password on your system in `settings.py`
+7. Make sure you change the MySQL credentials to match the database, username, and password on your system in `settings.py`
 8. Apply migrations using `python manage.py migrate`.
 9. Run the development server using `python manage.py runserver`.
 
@@ -112,11 +112,11 @@ assets download, and I use that for that restaurant index page and the project h
 the internal links on the home page actually work as they would otherwise lead to protected DRF
 endpoints you are supposed to test via Insomnia.
 
-## Using SQLite instead of MySql
+## Using SQLite instead of MySQL
 
-By default the Django setup will use the local MySql database which was required for the peer review.
-If you want to test the project without using MySql directly you can do this by setting an environement variable before starting the server (be sure to apply migrations first):
+By default the Django setup will use the local MySQL database which was required for the peer review.
+If you want to test the project without using MySQL directly you can do this by setting an environment variable before starting the server (be sure to apply migrations first):
 
 `USE_SQLITE=1`
 
-I set this up so that I can quickly test downloading and setting the project up on my laptop without having to set up a MySql database. The SQLite database will be created in the project root directory as `db.sqlite3`.
+I set this up so that I can quickly test downloading and setting the project up on my laptop without having to set up a MySQL database. The SQLite database will be created in the project root directory as `db.sqlite3`.
