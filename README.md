@@ -115,7 +115,7 @@ endpoints you are supposed to test via Insomnia.
 ## Using SQLite instead of MySql
 
 By default the Django setup will use the local MySql database which was required for the peer review.
-If you want to test the project without using MySql directly you can do this by setting an environement variable before starting the server:
+If you want to test the project without using MySql directly you can do this by setting an environement variable before starting the server (be sure to apply migrations first):
 
 `USE_SQLITE=1`
 
