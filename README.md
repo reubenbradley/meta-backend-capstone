@@ -68,6 +68,8 @@ Authentication:
 - Use a valid token for protected endpoints.
 - The booking detail endpoints require authentication.
 
+The default DRF Browsable API is enabled, you can utilize it for any endpoint that does not require a valid token. For endpoints that require a valid token, you can use Insomnia or Postman to test the API.
+
 ## Running Tests
 
 Run tests using:
