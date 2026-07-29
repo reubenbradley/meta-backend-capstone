@@ -22,7 +22,7 @@ Djoser, menu management, and booking functionality. It is not intended to be a f
 4. Install the required dependencies using `pip install -r requirements.txt`.
 5. Create an empty MySQL database named `LittleLemon`.
 6. If you are not using the root MySQL user, create or use a MySQL user with privileges on the `LittleLemon` database.
-7. Make sure you change the MySQL credentials to match the database, username, and password on your system in `settings.py`
+7. Make sure you change the MySQL credentials to match the database, username, and password on your system in `settings.py` in the `littlelemon` folder
 8. Apply migrations using `python manage.py migrate`.
 9. Run the development server using `python manage.py runserver`.
 
